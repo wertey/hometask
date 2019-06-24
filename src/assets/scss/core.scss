@@ -1,0 +1,16 @@
+@import "../scss/_variables.scss";
+@import "../scss/_fonts.scss";
+@import "../scss/_reset.scss";
+@import "../scss/_titles.scss";
+
+
+body {
+  font-family: 'segoi ui',sans-serif;
+  font-size: 14px;
+}
+
+.container {
+  width: 1190px;
+  margin: 0 auto;
+  color: $color-black;
+}
