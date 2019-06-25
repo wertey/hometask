@@ -3,6 +3,7 @@
     <HeaderTemplate></HeaderTemplate>
     <AboutTemplate></AboutTemplate>
     <TeamTemplate></TeamTemplate>
+    <ServiceTemplate></ServiceTemplate>
   </div>
 </template>
 
@@ -11,6 +12,7 @@
 import HeaderTemplate from "../src/components/HeaderTemplate";
 import AboutTemplate from "../src/components/AboutTemplate";
 import TeamTemplate from "../src/components/TeamTemplate";
+import ServiceTemplate from "../src/components/ServiceTemplate";
 
 
 export default {
@@ -19,6 +21,7 @@ export default {
     HeaderTemplate,
     AboutTemplate,
     TeamTemplate,
+    ServiceTemplate,
   },
 };
 </script>
