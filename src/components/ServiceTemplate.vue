@@ -10,23 +10,25 @@
           <div class="service-info">
             <div class="service-info-section">
               <img src="../assets/images/forma-1.png" alt="" class="service-info-section__img">
-              <h4 class="service-info-section__title"></h4>
-              <p class="service-info-section__desc"></p>
+              <h4 class="service-info-section__title">Web design
+
+              </h4>
+              <p class="service-info-section__desc">The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
             </div>
             <div class="service-info-section">
               <img src="../assets/images/forma-2.png" alt="" class="service-info-section__img">
-              <h4 class="service-info-section__title"></h4>
-              <p class="service-info-section__desc"></p>
+              <h4 class="service-info-section__title">Mobile apps</h4>
+              <p class="service-info-section__desc">The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
             </div>
             <div class="service-info-section">
               <img src="../assets/images/forma3.png" alt="" class="service-info-section__img">
-              <h4 class="service-info-section__title"></h4>
-              <p class="service-info-section__desc"></p>
+              <h4 class="service-info-section__title">PHOTOGRAPHY</h4>
+              <p class="service-info-section__desc">The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
             </div>
             <div class="service-info-section">
               <img src="../assets/images/form4.png" alt="" class="service-info-section__img">
-              <h4 class="service-info-section__title"></h4>
-              <p class="service-info-section__desc"></p>
+              <h4 class="service-info-section__title">marketing</h4>
+              <p class="service-info-section__desc">The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
             </div>
           </div>
         </div>
@@ -63,8 +65,20 @@
       justify-content: center;
       flex-direction: row;
       margin-top: 100px;
+      text-align: center;
       &-section {
-
+        margin-left: 12px;
+        margin-right: 12px;
+        &__title {
+          margin-top: 30px;
+          font-size: 25px;
+          text-transform: uppercase;
+          margin-bottom: 22px;
+        }
+        &__desc {
+          font-size: 14px;
+          line-height: 21px;
+        }
       }
     }
   }
