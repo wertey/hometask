@@ -1,7 +1,7 @@
 <template>
     <footer class="footer">
       <div class="footer-social">
-        <div class="footer-social__item"><i class="fab fa-vk"></i></div>
+        <div class="footer-social__item"><i class="demo-icon icon-facebook-circled">&#xe800;</i></div>
       </div>
     </footer>
 </template>
@@ -20,6 +20,9 @@
     background-color: $color-black;
     padding-top: 33px;
     padding-bottom: 30px;
+    &-social {
+      font-family: 'footer';
+    }
   }
 
 </style>
