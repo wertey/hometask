@@ -1,5 +1,5 @@
 <template>
-    <div class="feedback">
+    <div class="feedback" id="rewievs">
       <div class="container">
         <div class="title feedback__title">
           <span class="feedback__title-bold">our clients’</span> testimonials

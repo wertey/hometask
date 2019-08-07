@@ -1,5 +1,5 @@
 <template>
-    <div class="service">
+    <div class="service" id="service">
         <div class="container">
           <h2 class="title service__title">
             our services

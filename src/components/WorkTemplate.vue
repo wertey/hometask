@@ -1,5 +1,5 @@
 <template>
-    <div class="work">
+    <div class="work" id="portfolio">
       <div class="container">
         <h2 class="title work__title">
           take a look at <span class="work__title-color">our work</span>

@@ -1,5 +1,5 @@
 <template>
-  <header class="header">
+  <header class="header" id="header">
       <div class="container">
         <div class="header-top">
           <div class="header-top-logo">
@@ -7,12 +7,12 @@
           </div>
           <nav class="header-top-nav">
             <ul class="header-top-nav__list">
-              <li class="header-top-nav__item"><a class="header-top-nav__link" href="#">HOME</a></li>
-              <li class="header-top-nav__item"><a class="header-top-nav__link" href="#">ABOUT</a></li>
-              <li class="header-top-nav__item"><a class="header-top-nav__link" href="#">SERVICES</a></li>
-              <li class="header-top-nav__item"><a class="header-top-nav__link" href="#">PORTFOLIO</a></li>
-              <li class="header-top-nav__item"><a class="header-top-nav__link" href="#">TESTIMONIALS</a></li>
-              <li class="header-top-nav__item"><a class="header-top-nav__link" href="#">CONTACT</a></li>
+              <li class="header-top-nav__item"><a class="header-top-nav__link" href="#header">HOME</a></li>
+              <li class="header-top-nav__item"><a class="header-top-nav__link" href="#about">ABOUT</a></li>
+              <li class="header-top-nav__item"><a class="header-top-nav__link" href="#service">SERVICES</a></li>
+              <li class="header-top-nav__item"><a class="header-top-nav__link" href="#portfolio">PORTFOLIO</a></li>
+              <li class="header-top-nav__item"><a class="header-top-nav__link" href="#rewievs">TESTIMONIALS</a></li>
+              <li class="header-top-nav__item"><a class="header-top-nav__link" href="#contact">CONTACT</a></li>
             </ul>
           </nav>
         </div>
