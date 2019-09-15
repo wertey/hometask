@@ -39,6 +39,12 @@
       text-transform: uppercase;
       color: $color-mercury;
       text-align: center;
+      @media screen and (max-width: 767px) {
+        & {
+          font-size: 16px;
+          line-height: 25px;
+        }
+      }
     }
     &__position {
       font-size: 18px;

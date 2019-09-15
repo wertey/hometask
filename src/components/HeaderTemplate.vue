@@ -15,6 +15,9 @@
               <li class="header-top-nav__item"><a class="header-top-nav__link" href="#contact">CONTACT</a></li>
             </ul>
           </nav>
+          <div class="header-top-nav__close"
+          @click.native="openMobileMenu()"
+          >X</div>
         </div>
         <div class="header-info">
           <h1 class="header-info__title">wELCOME on <span class="header-info__title-color">mycompany</span></h1>
@@ -27,6 +30,16 @@
 <script>
 export default {
   name: 'HeaderTemplate',
+  data() {
+    return {
+      navigation: false,
+    }
+  },
+  methods: {
+    openMobileMenu() {
+      return !this.navigation;
+    }
+  }
 };
 </script>
 
@@ -48,9 +61,44 @@ export default {
         display: flex;
         justify-content: center;
         flex-direction: row;
+        @media screen and (max-width: 1023px) {
+          & {
+            position: fixed;
+            bottom: 0;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: black;
+            display: flex;
+            flex-direction: column;
+            z-index: 10000;
+          }
+        }
       }
       &__item {
         margin: 0 15px;
+        @media screen and (max-width: 1023px) {
+          & {
+            margin: 30px 15px;
+            text-align: center;
+            font-size: 38px;
+          }
+        }
+      }
+      &__close {
+        display: none;
+        @media screen and (max-width: 1023px) {
+          & {
+            color: white;
+            position: fixed;
+            right: 30px;
+            top: 30px;
+            z-index: 100001;
+            display: block;
+            font-size: 44px;
+          }
+        }
       }
       &__link {
         text-decoration: none;
@@ -71,6 +119,12 @@ export default {
     &__title {
       font-size: 44px;
       text-transform: uppercase;
+      @media screen and (max-width: 767px) {
+        & {
+          font-size: 30px;
+          line-height: 34px;
+        }
+      }
       &-color {
         color: $color-yellow-orange;
       }
@@ -78,6 +132,12 @@ export default {
     &__desc {
       margin-top: 22px;
       font-size: 20px;
+      @media screen and (max-width: 767px) {
+        & {
+          font-size: 17px;
+          line-height: 24px;
+        }
+      }
     }
   }
 }

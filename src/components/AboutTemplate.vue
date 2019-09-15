@@ -37,17 +37,80 @@
        display: flex;
        justify-content: center;
        flex-direction: row;
+      @media screen and (max-width: 1023px) {
+        & {
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        }
+      }
       &-image {
         align-items: center;
+        @media screen and (max-width: 1199px) {
+          & {
+            position: relative;
+            left: -47px;
+          }
+        }
+        @media screen and (max-width: 1100px) {
+          & {
+            position: relative;
+            left: 0;
+          }
+        }
+        @media screen and (max-width: 767px) {
+          & img {
+            max-width: 100%;
+            height: auto;
+          }
+        }
       }
       &-text {
         padding: 30px 50px 0 100px;
         text-align: left;
+        @media screen and (max-width: 1199px) {
+          & {
+            padding: 30px 30px 0 43px;
+          }
+        }
+        @media screen and (max-width: 1023px) {
+          & {
+            margin-top: 100px;
+            display: flex;
+            flex-direction: column;
+          }
+        }
+        @media screen and (max-width: 767px) {
+          & {
+            padding: 30px 0 0;
+          }
+        }
+        @media screen and (max-width: 374px) {
+          & {
+            margin-top: 50px;
+          }
+        }
         &__title {
           font-size: 34px;
           padding-bottom: 30px;
           text-transform: uppercase;
           position: relative;
+          @media screen and (max-width: 1199px) {
+            & {
+              font-size: 30px;
+            }
+          }
+          @media screen and (max-width: 1023px) {
+            & {
+              text-align: center;
+            }
+          }
+          @media screen and (max-width: 767px) {
+            & {
+              font-size: 26px;
+              line-height: 36px;
+            }
+          }
           &-bold {
             font-weight: bold;
           }
@@ -59,6 +122,22 @@
             width: 430px;
             height: 4px;
             background: $color-yellow-orange;
+            @media screen and (max-width: 1199px) {
+              & {
+                width: 375px;
+              }
+            }
+            @media screen and (max-width: 1023px) {
+              & {
+                left: 50%;
+                transform: translate(-50%,-50%);
+              }
+            }
+            @media screen and (max-width: 767px) {
+              & {
+                width: 100px;
+              }
+            }
           }
         }
         &__desc {
@@ -74,6 +153,16 @@
           padding-left: 26px;
           position: relative;
           font-size: 16px;
+          @media screen and (max-width: 767px) {
+            & {
+              margin-bottom: 10px;
+            }
+          }
+          @media screen and (max-width: 374px) {
+            & {
+              margin-bottom: 15px;
+            }
+          }
           &:before {
             position: absolute;
             content: '';

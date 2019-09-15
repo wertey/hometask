@@ -56,11 +56,27 @@
       justify-content: center;
       flex-direction: row;
       flex-wrap: wrap;
+      @media screen and (max-width: 767px) {
+        & {
+          flex-direction: column;
+        }
+      }
       &-section {
         color: $color-white;
         flex: 1;
         text-align: center;
         margin: 0 20px;
+        @media screen and (max-width: 1023px) {
+          & {
+            margin: 0 10px;
+          }
+        }
+        @media screen and (max-width: 767px) {
+          & {
+            max-width: 300px;
+            margin: 0 auto 30px;
+          }
+        }
         &__fullname {
           margin-top: 21px;
           font-weight: bold;

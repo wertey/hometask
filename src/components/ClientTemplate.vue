@@ -41,6 +41,20 @@
       flex-direction: row;
       margin-top: 112px;
       align-items: center;
+      @media screen and (max-width: 1023px) {
+        & {
+          flex-wrap: wrap;
+          justify-content: center;
+        }
+      }
+      &-item {
+        @media screen and (max-width: 1023px) {
+          & {
+            min-width: 165px;
+            margin: 20px;
+          }
+        }
+      }
     }
   }
 

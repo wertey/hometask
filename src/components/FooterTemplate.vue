@@ -41,11 +41,16 @@
         width: 30px;
         align-items: center;
         height: 30px;
+        cursor: pointer;
+        transition: all .3s ease-in;
         & {
           margin-left: 10px;
           &:first-child {
             margin-left: 0;
           }
+        }
+        &:hover {
+          transform: scale(1.1);
         }
       }
     }

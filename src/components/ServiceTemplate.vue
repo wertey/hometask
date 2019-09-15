@@ -66,9 +66,22 @@
       flex-direction: row;
       margin-top: 100px;
       text-align: center;
+      @media screen and (max-width: 1023px) {
+        & {
+          flex-wrap: wrap;
+        }
+      }
       &-section {
         margin-left: 12px;
         margin-right: 12px;
+        @media screen and (max-width: 1023px) {
+          & {
+            flex: 1;
+            min-width: 300px;
+            margin-bottom: 50px;
+          }
+        }
+
         &__title {
           margin-top: 30px;
           font-size: 25px;
