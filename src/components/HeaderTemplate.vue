@@ -6,18 +6,20 @@
             <img src="../assets/images/logo.png" alt="" class="header-top-logo__img">
           </div>
           <nav class="header-top-nav">
-            <ul class="header-top-nav__list">
-              <li class="header-top-nav__item"><a class="header-top-nav__link" href="#header">HOME</a></li>
-              <li class="header-top-nav__item"><a class="header-top-nav__link" href="#about">ABOUT</a></li>
-              <li class="header-top-nav__item"><a class="header-top-nav__link" href="#service">SERVICES</a></li>
-              <li class="header-top-nav__item"><a class="header-top-nav__link" href="#portfolio">PORTFOLIO</a></li>
-              <li class="header-top-nav__item"><a class="header-top-nav__link" href="#rewievs">TESTIMONIALS</a></li>
-              <li class="header-top-nav__item"><a class="header-top-nav__link" href="#contact">CONTACT</a></li>
+            <ul class="header-top-nav__list" :class="{'header-top-nav__list_mobile' : navigation}">
+              <li class="header-top-nav__item"><a class="header-top-nav__link" @click="navigation = false" href="#header">HOME</a></li>
+              <li class="header-top-nav__item"><a class="header-top-nav__link" @click="navigation = false" href="#about">ABOUT</a></li>
+              <li class="header-top-nav__item"><a class="header-top-nav__link" @click="navigation = false" href="#service">SERVICES</a></li>
+              <li class="header-top-nav__item"><a class="header-top-nav__link" @click="navigation = false" href="#portfolio">PORTFOLIO</a></li>
+              <li class="header-top-nav__item"><a class="header-top-nav__link" @click="navigation = false" href="#rewievs">TESTIMONIALS</a></li>
+              <li class="header-top-nav__item"><a class="header-top-nav__link" @click="navigation = false" href="#contact">CONTACT</a></li>
             </ul>
+            <div class="header-top-nav__burger" @click="navigation = true"></div>
           </nav>
-          <div class="header-top-nav__close"
-          @click.native="openMobileMenu()"
-          >X</div>
+          <div v-if="navigation" class="header-top-nav__close"
+          @click="navigation = false"
+          :class="{'header-top-nav__burger_open': navigation}"
+          ></div>
         </div>
         <div class="header-info">
           <h1 class="header-info__title">wELCOME on <span class="header-info__title-color">mycompany</span></h1>
@@ -37,6 +39,9 @@ export default {
   },
   methods: {
     openMobileMenu() {
+       !this.navigation;
+    },
+    scrollToHref() {
       return !this.navigation;
     }
   }
@@ -62,7 +67,8 @@ export default {
         justify-content: center;
         flex-direction: row;
         @media screen and (max-width: 1023px) {
-          & {
+          display: none;
+          &_mobile {
             position: fixed;
             bottom: 0;
             top: 0;
@@ -80,9 +86,9 @@ export default {
         margin: 0 15px;
         @media screen and (max-width: 1023px) {
           & {
-            margin: 30px 15px;
+            margin: 20px 15px;
             text-align: center;
-            font-size: 38px;
+            font-size: 23px;
           }
         }
       }
@@ -108,6 +114,56 @@ export default {
         transition: border-bottom .3s ease-in;
         &:hover {
           border-bottom: 2px solid $color-yellow-orange;
+        }
+      }
+      &__burger {
+        display: none;
+        @media screen and (max-width: 1023px) {
+          & {
+            display: block;
+            width: 25px;
+            height: 2px;
+            background: $color-white;
+            position: relative;
+            &:after {
+              width: 25px;
+              height: 3px;
+              background: $color-white;
+              position: absolute;
+              content: '';
+              top: 6px;
+            }
+            &:before {
+              width: 25px;
+              height: 3px;
+              background: $color-white;
+              position: absolute;
+              content: '';
+              top: -6px;
+            }
+          }
+        }
+        &_open {
+          &:after {
+            width: 25px;
+            height: 3px;
+            position: absolute;
+            top: -15px;
+            right: -11px;
+            content: '';
+            background: $color-white;
+            transform: translateY(15px) rotateZ(45deg);
+          }
+          &:before {
+            width: 25px;
+            height: 3px;
+            top: 15px;
+            right: -11px;
+            position: absolute;
+            content: '';
+            background: $color-white;
+            transform: translateY(-15px) rotateZ(-45deg);
+          }
         }
       }
     }
